@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Black Jack</title>
+    <style>
+        body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', Arial, sans-serif;
+    background-size: cover;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+    align-content: center;
+    margin: 0;
+}
+
+.maindiv{
+    border: 2px solid goldenrod;
+    margin: auto 40%;
+}
+
+h1 {
+    color: goldenrod;
+}
+
+#message-el {
+    font-style: italic;
+}
+
+.a{
+    color: goldenrod;
+}
+
+button {
+    color: #016f32;
+    width: 150px;
+    background: goldenrod;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-weight: bold;
+    border: none;
+    border-radius: 2px;
+    margin-bottom: 2px;
+    margin-top: 2px;
+}
+
+    </style>
+</head>
+<body>
+    <div class="maindiv">
+            <h1>Blackjack</h1>
+            <p class="a" id="message-el">Want to play a round?</p>
+            <p class="a" id="cards-el">Cards:</p>
+            <p class="a" id="sum-el">Sum:</p>
+            <button onclick="startGame()">START GAME</button>
+            <button onclick="newCard()">NEW CARD</button>
+            <p class="a" id="player-el"></p>
+        </div>
+    <script src="index.js">
+    </script>
+</body>
+</html>

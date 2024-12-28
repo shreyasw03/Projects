@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>upward</title>
+    <style>
+        #namevar {
+  text-align: center;
+  margin: 500px auto;
+}
+
+#separate {
+  font-size: 48px;
+  display: inline-block;
+  transform-origin: center;
+}
+
+span {
+  display: inline-block;
+}
+    </style>
+</head>
+<body>
+    <div id="namevar">
+        <p id="separate">
+          <span>S</span>
+          <span>h</span>
+          <span>r</span>
+          <span>e</span>
+          <span>y</span>
+          <span>a</span>
+          <span>s</span>
+        </p>
+      </div>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/ScrollTrigger.min.js"></script>
+
+<script>
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: "#namevar",
+      start: "top center",
+      end: "bottom center",
+      markers:true,
+      scrub: 1,
+    },
+  });
+gsap.to("span", {
+    scrollTrigger: {
+        trigger: "#namevar",
+        start: "top center",
+        end: "+=40%",
+        scrub: 1,
+        markers: true,
+        toggleActions: "restart pause reverse pause"
+    },
+    y: -100,
+    opacity: 1,
+    stagger: 0.1
+});
+</script>
+</body>
+</html>

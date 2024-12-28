@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section class="section7">
+    <div class="section71 wrapperft">
+      <div class="contentft">
+        <div class="panelft">
+          <div class="skilldiv">
+            <div class="gsapskillft" style="display:inline-block;">
+              <p class="skillhead">
+                <span class="skillspanskillft">F</span>
+                <span class="skillspanskillft">E</span>
+                <span class="skillspanskillft">A</span>
+                <span class="skillspanskillft">T</span>
+                <span class="skillspanskillft">U</span>
+                <span class="skillspanskillft">R</span>
+                <span class="skillspanskillft">E</span>
+                <span class="skillspanskillft">D</span>
+              </p>
+            </div>
+            <p class="skillinfo">Featured Work and Project Showcase</p>
+            <div style="border-bottom: 14px dotted #61574d; width: 70px; margin: auto; margin-top: calc(4px + 1vw); z-index: 1000000;"></div>
+          </div>
+        </div>
+
+        <div class="panelft new2" style="background-color: #3f3b37; z-index: -10; width: 100%; height: 100vh;"></div>
+      </div>
+    </div>
+    <!-- <div class="featured"></div> -->
+  </section>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/ScrollTrigger.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo" crossorigin="anonymous"></script>
+  <script>
+    console.clear();
+    const panels = gsap.utils.toArray(".panelft");
+    const panelsTween = gsap.to(panels, {
+      xPercent: (i) => -100 * i,
+      duration: (i) => i,
+      ease: "none",
+      scrollTrigger: {
+        trigger: ".wrapperft",
+        start: "top top",
+        end: "+=" + 100 * panels.length + "%",
+        scrub: true,
+        pin: true,
+        markers: {
+          startColor: "white",
+          endColor: "white"
+        }
+      }
+    });
+
+    const target_1 = $(".skillhead");
+
+    var position_target_1 = getElementPosition(target_1, true);
+
+    ScrollTrigger.addEventListener("refreshInit", function () {
+      position_target_1 = getElementPosition(target_1, true);
+    });
+
+    gsap.to(".skillspanskillft", {
+      scrollTrigger: {
+        trigger: ".",
+        start: () => "left top", // Scroll from the left edge
+        end: () => "right top", // Scroll to the right edge
+        scrub: 1,
+        markers: "true"
+      },
+      color: "#3f3b37"
+    });
+
+    gsap.to(".skillspanskillft", {
+      scrollTrigger: {
+        trigger: ".",
+        start: () => "left bottom", // Scroll from the left edge
+        end: () => "right bottom", // Scroll to the right edge
+        scrub: 1,
+        markers: "true"
+      },
+      color: "white",
+      stagger: 5
+    });
+
+    function getElementPosition(element, left = false) {
+      let position = element.offset().left - $(window).scrollLeft();
+      return !left ? position : position + element.outerWidth();
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+    href="https://fonts.googleapis.com/css2?family=Arvo&family=IBM+Plex+Sans&family=Inter&family=Karla&family=Lato:wght@100;300;400&family=Manrope&family=Montserrat:wght@400;500;600;700&family=Open+Sans&family=Oswald&family=Poppins:wght@100;200;300;400&family=Roboto&family=Rubik:ital@1&display=swap"
+    rel="stylesheet">
+</head>
+<style>
+
+    body{
+    background-color: #eee9db;
+    color: #3f3b37;
+    font-family: 'Montserrat';
+    font-weight: 400;
+   letter-spacing: normal;
+   font-size: 1.45vw;
+   line-height: 2.61vw;
+}
+      .mainname{
+    /* display: flex; */
+    /* justify-content: center; */
+    /* flex-direction: column; */
+    text-align: center;
+    height: 200vh;
+width: 100%;
+position: relative;
+  }
+  .namee{
+    /* width: 100%; */
+    font-weight: 600;
+    font-family: 'Montserrat';
+    font-size: 16vw;
+    /* position: absolute; */
+    /* left: 5%; */
+    /* overflow:hidden; */
+
+  }
+
+  .name1{
+    letter-spacing:-10px;
+    /* overflow: hidden; */
+  }
+  .name2{
+    letter-spacing:30px;
+    /* overflow: hidden; */
+  }
+</style>
+<body>
+    
+
+    <div class="mainname">
+        <p class="name1 namee">SHREYAS</p>
+        <P class="name2 namee">WANI</P>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.0/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.0/ScrollTrigger.min.js"></script>
+    <script>
+          gsap.to(".name1", {
+    scrollTrigger: {
+      trigger: ".name1",
+      start: "center center",
+      end: "1070px center",
+      scrub: 5
+    },
+    x: -150
+ 
+  });
+
+  gsap.to(".name2", {
+    scrollTrigger: {
+      trigger: ".name2",
+      start: "center center",
+      end: "1070px center",
+      scrub: 5
+    },
+    x: 150
+ 
+  });
+    </script>
+</body>
+</html>

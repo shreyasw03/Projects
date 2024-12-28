@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScrambleText</title>
+    <style>
+        body {
+  margin:2rem;
+}
+
+#myText {
+  font-family: Verdana;
+  font-weight: 300;
+  color:#585757; 
+  padding:10px;
+  height: 100vh;
+  font-size:8rem;
+  line-height:1.4;
+  text-align: center;
+}
+#textblock {
+  height:140px;
+}
+
+.orange {
+  color:#f60;
+
+}
+    </style>
+</head>
+<body>
+    <h1 id="myText">Shreyas wani </h1>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.0/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/TextPlugin.min.js"></script>
+      <script>
+        gsap.to("#myText", 
+        {duration: 2,
+             text: "WEB-DEVELOPER",
+              delay: 1});
+      </script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horizontal Scrolling Effect</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+  .fixed-box {
+      position: fixed;
+      left: 12%;
+      top: 26%;
+      z-index: 10;
+  background-color: blue;
+    }
+
+    .box {
+      position: relative;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+
+    .box-1 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 80%;
+      height: 100vh;
+      background-color: gray;
+    }
+
+    .box-25 {
+      height: 200vh;
+      width: 25%;
+      background-color: green;
+    }
+    .box-75 {
+      height: 200vh;
+      width: 75%;
+    }
+</style>
+<body>
+  <div class="fixed-box">
+    <h1 class="a">Lorem</h1>
+    <h1 class="b">Lorem, ipsum.</h1>
+  </div>
+
+  <div class="box" style=" background-color: blue;"></div>
+
+  <div class="box"  style=" background-color: yellow;">
+    
+    <div class="box-1"></div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/ScrollTrigger.min.js"></script>
+
+  <script>
+console.clear();
+
+const panels = gsap.utils.toArray(".box");
+const panelsTween = gsap.to(panels, {
+  xPercent: (i) => -100 * i,
+  duration: (i) => i,
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".box",
+    start: "top top",
+    end: "+=" + 100 * panels.length + "%",
+    scrub: true,
+    pin: true,
+    markers: {
+      startColor: "white",
+      endColor: "white"
+    }
+  }
+});
+
+
+
+
+
+
+const target_1 = $(".a");
+
+var position_target_1 = getElementPosition(target_1, true);
+
+ScrollTrigger.addEventListener("refreshInit", function () {
+  position_target_1 = getElementPosition(target_1, true);
+});
+
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.to(".a", {
+  scrollTrigger: {
+    trigger: ".box-1",
+    start: () => "top " + position_target_1,
+    end: () => "+=" + target_1.outerHeight() + " " + position_target_1,
+    scrub: 1,
+    markers: "true",
+  },
+  color: "orange",
+});
+
+gsap.to(".a", {
+  scrollTrigger: {
+    trigger: ".box-1",
+    start: () => "bottom " + position_target_1,
+    end: () => "+=" + target_1.outerHeight() + " +=" + position_target_1,
+    scrub: 1,
+    markers: "true",
+  },
+  color: "black",
+  immediateRender: false
+});
+
+function getElementPosition(element, bottom = false) {
+  let position = element.offset().top - $(window).scrollTop();
+  return !bottom ? position : position + element.outerHeight();
+}
+
+  </script>
+</body>
+</html>

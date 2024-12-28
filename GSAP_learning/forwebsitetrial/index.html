@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            height: 200vh;
+            align-items: center;
+            margin: 0;
+        }
+
+        .imgss{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: aqua;
+            width: 400px;
+            height: 250px;
+            position: relative;
+            overflow: hidden;
+        }
+
+
+        h1 {
+            font-size: 94px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            position: absolute;
+        }
+
+        .first {
+            color: rgb(255, 255, 255);
+            z-index: 30;
+            /* animation: ani1 4s linear; */
+        }
+        .second {
+            color: rgb(0, 0, 0);
+            z-index: 20;
+            /* animation: ani2 4s linear; */
+        }
+
+       /* @keyframes ani1 {
+            100%{
+                transform: translateX(200px);
+            }
+        } 
+
+        @keyframes ani2 {
+            100%{
+                transform: translateX(200px);
+            }
+        }  */
+
+    </style>
+</head>
+<body>
+    <div class="imgss"> 
+        <h1 class="first">SHREYAS</h1></div>
+   
+    <h1 class="second">SHREYAS</h1>
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/ScrollTrigger.min.js"></script>
+    <script>
+gsap.to(".first",{
+  scrollTrigger: {
+    trigger: ".first",
+    start:"top center",
+    scrub:4,
+    end:"2000px center"
+  },
+  x:100
+});
+
+gsap.to(".second",{
+  scrollTrigger: {
+    trigger: ".second",
+    start:"top center",
+    scrub:4,
+    end:"1000px center"
+  },
+  x:100
+});
+    </script>
+</body>
+</html>

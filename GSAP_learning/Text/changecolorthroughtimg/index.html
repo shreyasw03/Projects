@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>changecolorthroughtimg</title>
+    <style>
+body {
+	 background: #1a181b;
+	 overflow-x: hidden;
+}
+ img {
+	 width: 50%;
+	 height: auto;
+}
+ h1 {
+	 font-size: calc(30px + 4vw);
+	 position: relative;
+	 font-weight: 900;
+	 margin: 0 0 0 50%;
+	 transform: translate(-45%, -100%);
+	 outline: none;
+	 text-decoration: none;
+	 color: #552480;
+	 width: 100%;
+	 overflow: hidden;
+	 -webkit-font-smoothing: antialiased;
+	 -moz-osx-font-smoothing: grayscale;
+     animation: ani 10s linear;
+}
+
+@keyframes ani {
+    0%{
+        transform: translateY(-50px);
+    }
+    100%{
+        transform: translate(-900px, -50px);
+    }
+}
+
+ .clip-it h1:before {
+	 content: attr(data-title);
+	 position: absolute;
+	 z-index: 2;
+	 overflow: hidden;
+	 width: 100%;
+	 clip-path: polygon(0 0, 45% 0, 45% 100%, 0% 100%);
+	 color: #00cdb2;
+}
+ .clip-it h1 span {
+	 display: block;
+}
+ .clip-it h1 span:before {
+	 content: "";
+	 width: 25%;
+	 border-bottom: 8px solid #4d2174;
+	 position: absolute;
+	 display: block;
+	 bottom: 0;
+}
+ p {
+	 text-align: center;
+	 color: #fff;
+	 padding: 2em;
+	 letter-spacing: 0.0525em;
+	 font-weight: 300;
+}
+ strong {
+	 font-weight: 900;
+}
+ 
+
+
+    </style>
+</head>
+<body>    
+    <div class="clip-it">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/space-purple-nebula-1-1600x900.jpg" />
+        <h1 data-title="The final frontier is outer space">
+        The final frontier is outer space
+          </h1>
+    </div>
+</body>
+</html>

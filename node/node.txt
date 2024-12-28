@@ -1,0 +1,31 @@
+Node.js vs. JavaScript
+Node.js and JavaScript are closely related but not the same. Here's a breakdown:
+
+JavaScript
+What It Is: A programming language primarily used for creating interactive features on websites.
+Where It Runs: Traditionally runs in the browser (e.g., Chrome, Firefox) through a JavaScript engine like V8 (Chrome).
+Purpose: Frontend development, manipulating the DOM, handling user interactions, etc.
+Environment: Limited to browser APIs like window, document, etc.
+Node.js
+What It Is: A runtime environment that allows JavaScript to run outside the browser.
+Where It Runs: Runs on the server using the V8 JavaScript engine.
+Purpose: Backend development, handling server-side logic, file systems, databases, APIs, etc.
+Environment: Provides additional features like fs (file system), http (server creation), etc., which aren't available in browsers.
+Key Differences
+Feature	JavaScript (Browser)	Node.js
+Environment	Runs in browsers (frontend)	Runs on servers (backend)
+APIs Available	Browser-specific APIs (DOM, fetch)	Server-side APIs (fs, http)
+Modules	Uses ES Modules (import/export)	Supports CommonJS (require) and ES6
+Use Case	Client-side scripting	Server-side scripting, API creation
+File Access	No access to file system	Full access to file system
+How Are They Related?
+Same Language: Node.js uses JavaScript as its programming language.
+Different Contexts: JavaScript in browsers is focused on user interaction, while Node.js is used for backend/server tasks.
+Shared Syntax: They share the same syntax, but the APIs and features available differ based on the environment.
+Analogy
+Think of JavaScript as a musician and Node.js as the stage. The musician (JavaScript) can perform in different venues (browser or Node.js), but the tools and audience differ based on the venue.
+
+When to Use What?
+Frontend Development: Use JavaScript in browsers (e.g., with React, Vue, or vanilla JS).
+Backend Development: Use Node.js to build server-side logic (e.g., with Express, Nest.js).
+Let me know if you need further clarification!

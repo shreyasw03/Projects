@@ -1,0 +1,386 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'lato', sans-serif;
+    font-style: normal;
+}
+
+.list{
+  display: none;
+  visibility: hidden;
+}
+
+
+
+#ul {
+    display: flex;
+    float: right;
+    position: fixed;
+    right: 0;
+    padding: 0;
+    z-index: 100;
+    background-color: white;
+    width: 100%;
+    height: 75px;
+
+  }
+
+.chatbot{
+    width: 80px;
+    height: 80px;
+    background-color: #a2578c;
+    position: fixed;
+    z-index: 1000;
+    border-radius: 50%;
+    margin: 680px 20px 20px 1320px;
+
+
+}
+.fa-discord{
+    font-size: 2rem;
+    position: relative;
+    top: 22px;
+    left: 20px;
+}
+
+.logop{
+  display: none;
+  visibility: hidden;
+}
+  
+  li{
+    list-style: none;
+    text-decoration: underline;
+    text-decoration-color: #580740;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 0.3em;
+    text-underline-position: under;
+    padding-right: 40px;
+    margin-top: 24px;
+  }
+
+  .one{
+    margin-left: 100px;
+  }
+
+  .profile{
+    width: 3%;
+    height: 52%;
+    border-radius: 40px;
+   position: relative;
+   left: 450px;
+   top: 17px;
+   filter: grayscale(100%);
+  }
+  
+
+  li:hover {
+    text-decoration-color: #af4a8f;
+    text-underline-offset: 0.29em;
+    cursor: pointer;
+  }
+  
+.fa-solid{
+    margin-top: 13px;
+    position: relative;
+    left: 450px;
+}
+
+  .logo{
+   margin: 17px 40px 17px 40px;
+   color: #580740;
+  }
+
+ .bannerr{
+    width: 100%;
+    margin-top: 60px;
+    background-size: cover;
+  }
+
+  .notfd{
+    visibility: hidden;
+    display: none;
+  }
+
+  .banner::before{
+    content: " Innovate. Adapt. Thrive.";
+    font-size: 60px;
+    font-family: 'lato', sans-serif;
+    position: absolute;
+    top: 25%;
+    left: 8%;
+    background:linear-gradient(90deg,#5b1446, #b65e9c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .banner::after{
+    content: "To deliver on the promise of technology and human ingenuity.";
+    font-size: 24px;
+    font-family: 'lato', sans-serif;
+    width: 40%;
+    position: absolute;
+    top: 35%;
+    left: 8%;
+    color: #edc6e1;
+  
+  }
+
+  .bannerr2{
+    width: 80%;
+    margin-top: 75px;
+    background-size: contain;
+    float: right;
+  }
+
+
+  button {
+    cursor: pointer;
+    font-weight: 500;
+    font-family: 'lato';
+    transition: all .2s;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    background: transparent;
+    border: 1px solid transparent;
+  }
+
+  
+  button > svg {
+    width: 34px;
+    margin-left: 10px;
+    transition: transform .3s ease-in-out;
+  }
+  button:hover svg {
+    transform: translateX(5px);
+  }
+  
+  button:active {
+    transform: scale(0.95);
+  }
+  
+
+  .section1{
+    position: relative;
+}
+
+.section2{
+    position: relative;
+}
+
+.bannerr1{
+    width: 80%;
+    margin-top: 75px;
+    background-size: contain;
+    position: relative;
+    z-index: -3;
+  }
+
+  .card1{
+    padding: 30px 30px 0 0;
+    width: 40%;
+    height: 45vh;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 15px 15px 15px #1e1d1d50;
+    position: absolute;
+
+    left: 8%;
+    margin-top: 220px;
+  }
+  .con{
+    padding-bottom: 15px;
+  }
+
+  .first{
+    color: grey;
+  }
+  .second{
+    color:#4d103b;
+  }
+  .third{
+    color:gray;
+  }
+
+  .card{
+    padding: 30px 0 0 30px;
+    width: 40%;
+    height: 40vh;
+    background-color: white;
+    box-shadow: -30px 15px 15px #1e1d1d50;
+    position: absolute;
+    top: 33%;
+    right: 8%;
+    float: right;
+  }
+
+  .imggrid{
+    width: 33%;
+    height: auto;
+  }
+  .imggrid1{
+    width: 33%;
+    height: 400px;
+  }
+
+
+  .section{
+    margin-top: 10vh;
+  }
+/* 
+  .sectiontext1{
+    color:#4d103b;
+    font-family:'roboto';
+    font-size: 34px;
+    margin-left: 8px;
+  } */
+
+
+/* 
+  .color{
+        color: white;
+        text-align: center;
+        font-size: 29px;
+        transition: transform 0.5s ease-in-out;
+        font-family: 'lato';
+        font-size: 40px;
+        text-align: center;
+        line-height: 1.1;
+        margin: 0 auto;
+        width: calc(100% - 88px);
+        color: #fff;
+        position: relative;
+        display: block;
+        transform: none;
+        } */
+        
+.footer{
+    width: 100%;
+    height: 10vh;
+    position: relative;
+    top: 200px;
+    background: #ececec;
+    z-index: 200;
+}
+
+.footer1{
+    width: 100%;
+    position: relative;
+
+    
+}
+.text{
+    color: grey;
+    margin: 0 0 0 150px;
+    position: relative;
+    top: 25px;
+
+}
+
+
+  .icons{
+    display: flex;
+    position: absolute;
+    top: 17px;
+    right: 0;
+    margin-right: 150px;
+  }
+  .icon{
+    width: 40px;
+    height: 40px;
+    font-weight: 500;
+    text-decoration: none;
+    background: #111;
+    margin: 0.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    box-shadow: 
+      0 2px 2px #d1d1d1;
+    color: #fff;
+    cursor: pointer;
+    transition:
+      all 0.15s ease;
+  }
+  .twitter:hover {
+    background: #00ECEE;
+  }
+  .facebook:hover {
+    background: #4267B2;
+  }
+  .instagram:hover {
+    background-image: 
+      linear-gradient(
+      #8a3ab9,
+      #e95950, 
+      #bc2a8d, 
+      #fccc63
+      );
+  }
+  .linkedin:hover {
+    background: #0A66C2;
+  }
+
+
+
+
+
+.section3{
+    width: 100%;
+    height: 50vh;
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+  .cardd {
+    position: relative;
+    top: 11vh;
+    width: 20%;
+    height: 400px;
+    padding: 2rem 1.5rem;
+    transition: box-shadow .3s ease, transform .2s ease;
+    background-image: url(card1img.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius:5px;
+    opacity: 0.9;
+    filter: grayscale(0.3);
+    display: inline-block;
+    overflow: hidden;  
+   }
+   .cardd2{
+    background-image: url(card2img.jpeg);
+   }
+   .cardd3{
+    background-image: url(card3img.jpeg);
+   }
+
+   .cardd:hover{
+    transform: scale(1.05);
+   }
+
+   
+   .cardd-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform .2s ease, opacity .2s ease;
+   }
+
+   .cardd-title {
+    position: absolute;
+    bottom: 36px;
+    color: #ffffff;
+    text-shadow: 0 0 15px rgb(18, 18, 18);
+    font-size: 1.5em;
+    font-weight: 600;
+    line-height: 2rem;
+   }
+   .cardd:hover {
+    box-shadow: 0 8px 15px #23232388;
+   }

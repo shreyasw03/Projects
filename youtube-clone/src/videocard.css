@@ -1,0 +1,35 @@
+.video{
+    margin-bottom: 40px;
+    width: 270px;
+}
+.video__thumbnail{
+    height: 140px;
+    width: 250px;
+}
+
+.videocard__info{
+    display: flex;
+    margin-top: 10px;
+    padding-right: 30px;
+}
+
+.video__text{
+    margin-left: 15px;
+}
+
+.video__text > h4{
+    font-size: 14px;
+    margin-bottom: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.video__text > p{
+    font-size: 14px;
+    color: gray;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.videocard__avatar{
+    height: 30px !important ;
+    width: 30px !important;
+}

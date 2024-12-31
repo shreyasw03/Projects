@@ -1,0 +1,183 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Yet to name</title>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0;">
+    <!-- <link rel="icon" type="image/png" sizes="32x32" href="fevicon/1.ico">  favicon  -->
+    <link href="styles.css" rel="stylesheet" type="text/css" media="(min-width: 500px)">
+    <link href="phone.css" rel="stylesheet" type="text/css" media="(max-width: 500px)">
+    <meta
+    name="description"
+    content="" />
+    <meta name="author" content="Shreyas Wani" />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,700&family=Montserrat:wght@400;700&family=Outfit:wght@300;400;600&family=Poppins&family=Space+Grotesk:wght@400;500&family=Tangerine:wght@700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/80897816fd.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+<section id="section1">
+    <div class="container">
+    <div class="navbar">
+        <ul class="ulmain">
+<!-- hover effect for navlist -->
+            <li class="limain"><a class="linkmain" href="">ABOUT</a></li>
+            <li class="limain"><a class="linkmain" href="">HOME</a></li>
+            <li class="limain"><a class="linkmain" href="">SERVICES</a></li>
+            <li class="limain"><a class="linkmain" href="">PROJECT</a></li>
+            <li class="limain"><a class="linkmain" href="">BLOG</a></li>
+            <li class="limain"><a class="linkmain" href="">CONTACT</a></li>
+        </ul>
+    </div>
+    <div class="outerbox">
+    <!-- <div class="half-circle"> -->
+        <!-- <div class="textin">
+            DESIGN BUILD
+        </div> -->
+        <img id="img" width="100%" height="100%" class="img-bg" src="/images/bg.png" alt="">
+    <!-- </div> -->
+</div>
+</div>
+</section>
+<section id="section2">
+    <div class="container2">
+<div class="infobox">
+    <div class="infoboxheading">
+<div class="infoboxheading-no"><h1>1.</h1></div>
+<div class="infoboxheading-name"><h1>New Builds</h1></div>
+    </div>
+    <div class="infoboxpara">
+        <p>
+            Transform your space with our expert renovation services.
+             Whether it's a complete overhaul or a stylish refresh, we 
+             breathe new life into your interiors, creating spaces that
+              are both functional and beautiful.
+            </p>
+    </div>
+</div>
+<div class="infoimg">
+    <img width="100%" height="100%" src="images/infoimg1.png" alt="">
+</div>
+</div>
+
+<div class="container2">
+    <div class="infobox">
+        <div class="infoboxheading">
+    <div class="infoboxheading-no"><h1>2.</h1></div>
+    <div class="infoboxheading-name"><h1>Renovations</h1></div>
+        </div>
+        <div class="infoboxpara">
+            <p>
+                Transform your space with our expert renovation services.
+                 Whether it's a complete overhaul or a stylish refresh,
+                  we breathe new life into your interiors, creating spaces
+                   that are both functional and beautiful.
+                </p>
+        </div>
+    </div>
+    <div class="infoimg">
+        <img width="100%" height="100%" src="images/infoimg2.png" alt="">
+    </div>
+    </div>
+    
+    <div class="container2">
+    <div class="infobox">
+        <div class="infoboxheading">
+    <div class="infoboxheading-no"><h1>3.</h1></div>
+    <div class="infoboxheading-name"><h1>Airbnb's</h1></div>
+        </div>
+        <div class="infoboxpara">
+            <p>
+                Elevate your Airbnb listing with our tailored interior design solutions.
+                 From maximizing space and functionality to creating inviting and memorable
+                  atmospheres, we help you create spaces that guests will love, enhancing
+                   your property's appeal and maximizing its potential.
+                </p>
+        </div>
+    </div>
+    <div class="infoimg">
+        <img width="100%" height="100%" src="images/infoimg3.png" alt="">
+    </div>
+    </div>
+</section>
+
+
+<section id="section3">
+    <div class="imgdivsitting">
+<img src="images/sittingimg.jpeg" class="sitting-img" alt="">
+</div>
+</section>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.0/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/smooth-scroll@16.1.3/dist/smooth-scroll.polyfills.min.js"></script>
+<script>
+
+gsap.set(".img-bg",{scale:1});
+  gsap.to(".img-bg",{
+    scrollTrigger: {
+      trigger: ".img-bg",
+      start:"210px center",
+      scrub:3,
+      end:"500px center",
+    //   markers:true,
+      pin:"#section1",
+    },
+    // width:"100%",
+    //  height:"100%",
+    scale:2,
+    // border:4,
+    background:"contain",
+    opacity:1,
+    ease: 'power1.inOut'
+  });
+
+  gsap.set(".navbar",{y:0});
+  gsap.to(".navbar",{
+    scrollTrigger: {
+      trigger: ".navbar",
+      start:"20px 10px",
+      end:"70px 10px",
+    //   markers:true,
+    },
+    y:-100,
+  });
+
+
+
+
+
+
+const cards = gsap.utils.toArray(".container2");
+
+cards.forEach((card, index) => {
+  const tween = gsap.to(card, {
+    scrollTrigger: {
+      trigger: card,
+      start: () => `-200px top`,
+      end: () => `-300px top+=40`,
+      scrub: true,
+    //   markers: true,
+      invalidateOnRefresh: true
+    },
+    ease: "none"
+  });
+
+  ScrollTrigger.create({
+    trigger: card,
+    start: "center center",
+    pin: true,
+    pinSpacing: false,
+    // markers: true,
+    id: 'pin',
+    end: "max",
+    invalidateOnRefresh: true,
+  });
+});
+</script>
+  </body>
+</html>
